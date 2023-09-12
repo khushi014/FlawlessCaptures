@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Personal Potraits</title>
+        <link rel="shortcut icon" type="image/png" href="logo1.png">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#img6").fadeOut(10);
+                $("#b1").click(function(){
+                    //alert("");
+                    $("#img6").delay(1000).fadeIn(2000);
+                    $("#b1").hide();
+                }); 
+            });
+        </script>
+    </head>
+    <body bgcolor="#f7f0f7" onload="load()">
+        <div id="loading"></div>        
+        <table align="center"  class="header">
+            <tr>
+                <td class="hvr"><a class="headMarg" href="index.html" > Home </a></td>
+                <td class="hvr"><a class="headMarg" href="aboutUs.html"> About Us </a></td>
+                <td class="hvr"><a class="headMarg" href="contactUs.html"> Contact Us </a></td>
+                <td class="hvr"><img src="logo1.png" height="120px" width="120px"></td>
+                <td class="hvr"><a class="headMarg" href="Travel.html"> Travel </a></td>
+                <td class="hvr"><a class="headMarg" href="personal.html"> Potraits </a></td>
+                <td class="hvr"><a class="headMarg" href="wedding.html"> Wedding </a></td>
+            </tr>
+        </table>
+
+        <h1 id="txtHead" align="center" style="color: #72b5a3;">Get Your Personal Photoshoot Here</h1>
+
+        <div class="row" align="center">
+            <div class="column-sm-4">
+                <img class="img-per" src="image/11.jpg">
+                <img class="img-per" src="image/21.jpg">
+                <img class="img-per" src="image/50.jpeg">
+            </div>
+        </div>
+        <div class="row" align="center">
+            <div class="column-sm-4">
+                <img class="img-per" src="image/23.png">
+                <img class="img-per" src="image/31.png">
+                <img class="img-per" src="image/33.jpg">
+            </div>
+        </div>
+        <div id="img6">
+            <div class="row" align="center">
+                <div class="column-sm-4">
+                    <img class="img-per" src="image/27.png">
+                    <img class="img-per" src="image/22.png">
+                    <img class="img-per" src="image/32.png">
+                </div>
+            </div>
+        </div>
+        <button id="b1" style="float: right; font-size: 20px; margin-right: 70px;">View More</button>
+        <br>
+        
+
+        <div class="social">
+            <table align="right">
+            <tr>
+                <td><p>Join the conversation</p></td>
+                <td><p><a href="#"><img src="image/z1.png"></a></p></td>
+                <td><p><a href="#"><img src="image/z2.png"></a></p></td>
+                <td><p><a href="#"><img src="image/z3.png"></a></p></td>
+                <td><p><a href="#"><img src="image/z4.png"></a></p></td>
+            </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <table style="width: 100%;">
+                <tr>
+                    <td><label class="footHead">Quick Links</label></td>
+                    <td><label class="footHead">Events</label></td>
+                    <td><label class="footHead">About Us</label></td>
+                    <td><label class="footHead">Our World</label></td>
+                    <td><label class="footHead">Contact</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Wedding Clicks</label></td>
+                    <td rowspan="3"><label class="footCont">Our tour of  <br> Photography</label></td>
+                    <td rowspan="3"><label class="footCont">Flawless <br>Experience</label></td>
+                    <td rowspan="3"><label class="footCont">Capture the <br>Memories for<br> You</label></td>
+                    <td rowspan="3"><label class="footCont">Pranav Acharya<br>Flawless Captures</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Potraits Clicks</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Arms of Nature</label></td>
+                </tr>
+            </table><br><br><br><br>
+            <p id="left">email:acharya.pranav25@gmail.com</p>   
+            <p id="right">&copy;FlawlessCaptures@2021 All Rights Reserved</p>
+        </div>
+        <script>
+            var preload = document.getElementById("loading");
+            setTimeout(function load(){
+                preload.style.display="none";
+            },3000);
+        </script>
+    </body>
+</html>

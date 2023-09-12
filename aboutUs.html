@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel="shortcut icon" type="image/png" href="logo1.png">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("img").click(function(){
+                    $("img").each(function(){
+                        alert("There are total 7 image on this page");
+                    });
+                }); 
+                $("#change").mouseleave(function (){
+                    //alert();
+                    $("#change").css({"border":"2px dotted black"});
+                });
+                $("#chng").mouseenter(function (){
+                    //alert();
+                    $("#chng").css({"border":"2px dotted black"});
+                });
+            });
+        </script>
+    </head>
+
+    <body bgcolor="#f7f0f7" style="height: 100%;" onload="load()">
+        <div id="loading"></div>
+        <table align="center"  class="header">
+            <tr>
+                <td class="hvr"><a class="headMarg" href="index.html" > Home </a></td>
+                <td class="hvr"><a class="headMarg" href="aboutUs.html"> About Us </a></td>
+                <td class="hvr"><a class="headMarg" href="contactUs.html"> Contact Us </a></td>
+                <td class="hvr"><img src="logo1.png" height="120px" width="120px"></td>
+                <td class="hvr"><a class="headMarg" href="Travel.html"> Travel </a></td>
+                <td class="hvr"><a class="headMarg" href="personal.html"> Potraits </a></td>
+                <td class="hvr"><a class="headMarg" href="wedding.html"> Wedding </a></td>
+            </tr>
+        </table>
+
+        <h1 id="txtHead" align="center" style="color: #6d1f16;">About Flawless Captures...</h1>
+        <p style="color: black; font-size: 24px; font-family: Tempus Sans ITC;" align="center">I photograph weddings & elopements. It's what I do, and it's what I love!</p>
+
+        <table align="center" style="width: 60%;">
+            <tr>
+                <td><img style="float: right; padding-right: 45px;" src="image/24.png"></td>
+                <td><p id="chng" style="font-size: 16px; font-family: Comic Sans MS;">Hi, I'm Pranav! I am originally from Somnath and have grown my busines service area to India over the last 5 years. I am a people person, and enjoy working closely with couples, and capturing the essence of who they are. When it comes to photographing a couple, I look past the outward appearance for the love and emotion that drives them. The personalities that are distinct to each couple make every session new and unique. I strive to create a fun and spontaneous atmosphere and a collection of images that convey each moment, and every detail in an artistic and truthful manner. Through my many years of experience photographing weddings, I have developed a creative process that will help tell the story of who you are as a couple and what makes this the most important moment in your lives.</p></td>
+            </tr>
+            <tr>
+                <td><p id="change" style="font-size: 16px; float: right; padding-right: 45px; font-family: Comic Sans MS;">Moreover, I capture various types of photography,like Personal Potraits, Travel Destinations,Products, Videos, etc. I have even participated in various events across India, specially in Gujarat.Among which Kakariya Karnival, Patang Ustav, etc. are my favourite.</p></td>
+                <td><img style="height: 400px; padding-top: 20px;" src="image/13.png"></td>
+            </tr>
+        </table>
+
+
+        <div class="social">
+            <table align="right">
+            <tr>
+                <td><p>Join the conversation</p></td>
+                <td><p><a href="#"><img src="image/z1.png" id="imgHvr1"></a></p></td>
+                <td><p><a href="#"><img src="image/z2.png" id="imgHvr2"></a></p></td>
+                <td><p><a href="#"><img src="image/z3.png" id="imgHvr3"></a></p></td>
+                <td><p><a href="#"><img src="image/z4.png" id="imgHvr4"></a></p></td>
+            </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <table style="width: 100%;">
+                <tr>
+                    <td><label class="footHead">Quick Links</label></td>
+                    <td><label class="footHead">Events</label></td>
+                    <td><label class="footHead">About Us</label></td>
+                    <td><label class="footHead">Our World</label></td>
+                    <td><label class="footHead">Contact</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Wedding Clicks</label></td>
+                    <td rowspan="3"><label class="footCont">Our tour of  <br> Photography</label></td>
+                    <td rowspan="3"><label class="footCont">Flawless <br>Experience</label></td>
+                    <td rowspan="3"><label class="footCont">Capture the <br>Memories for<br> You</label></td>
+                    <td rowspan="3"><label class="footCont">Pranav Acharya<br>Flawless Captures</label></td>
+                </tr>
+                <tr>    
+                    <td><label class="footCont">Potraits Clicks</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Arms of Nature</label></td>
+                </tr>
+            </table><br><br><br><br>
+            <p id="left">email:acharya.pranav25@gmail.com</p>   
+            <p id="right">&copy;FlawlessCaptures@2021 All Rights Reserved</p>
+        </div>
+        <script>
+            var preload = document.getElementById("loading");
+            setTimeout(function load(){
+                preload.style.display="none";
+            },3000);
+        </script>
+    </body>
+</html>

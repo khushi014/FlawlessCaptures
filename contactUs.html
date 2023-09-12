@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link rel="shortcut icon" type="image/png" href="logo1.png">
+        <link rel="stylesheet" href="styles.css" />
+        <script src="jquery.js"></script>
+        <script>
+           
+            function func1(){
+                var name=document.getElementById("vName").value;
+                var phn=document.getElementById("txtPhone").value;
+                var mail=document.getElementById("txtEmail").value;
+                var regx=/[6-9]\d{9}/;
+                var pat=/^([a-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,5})(.[a-z]{2,5})$/;
+                if(name=="")
+                {
+                    alert("Enter your name");
+                    return false;
+                }
+                if(!(regx.test(phn)))
+                {
+                    alert("Enter proper phone number");
+                    return false;
+                }
+                if(!(pat.test(mail)))
+                {
+                    alert("Enter valid email");
+                    return false;
+                }
+                else{
+                    alert("Form Submitted");
+                    return true;
+                }
+            }
+        </script>
+            
+        <script>
+            $(document).ready(function(){
+                $("span").css("display","none");
+                $("#txtAddress").focus(function(){
+                    //alert();
+                    $("#adrEnter").css('display','inline').fadeOut(2000);
+                });
+                $("#txtAddress").blur(function(){
+                    $("#adrLeave").css("display","inline").fadeOut(2000);
+                });
+            });
+        </script>
+    </head>
+
+    <body style="width: 100%;" onload="load()">
+        <div id="loading"></div>        
+        <div>
+            <img class="imgs" src="image/01.jpg" alt="No preview available" style="z-index: -1;">
+            <table align="center"  class="header">
+                <tr>
+                    <td class="hvr"><a class="headMarg" href="index.html" > Home </a></td>
+                    <td class="hvr"><a class="headMarg" href="aboutUs.html"> About Us </a></td>
+                    <td class="hvr"><a class="headMarg" href="contactUs.html"> Contact Us </a></td>
+                    <td class="hvr"><img src="logo1.png" height="120px" width="120px"></td>
+                    <td class="hvr"><a class="headMarg" href="Travel.html"> Travel </a></td>
+                    <td class="hvr"><a class="headMarg" href="personal.html"> Potraits </a></td>
+                    <td class="hvr"><a class="headMarg" href="wedding.html"> Wedding </a></td>
+                </tr>
+            </table>
+            <br><br><br><br>
+            <div>
+                <div align="center">
+                    <label id="txtHead" style="font-size: 40px;">Registration Form</label>
+                </div>
+                <form onsubmit="return func1()" action="aboutUs.html">
+                <table align="center">
+                    <tr>
+                        <td><label class="details">Name</label></td>
+                        <td><label class="details">:</label></td>
+                        <td><input class="details" id="vName" type="text" placeholder="Enter Your Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="details">Address</label></td>
+                        <td><label class="details">:</label></td>
+                        <td><textarea class="details" id="txtAddress" rows="3" cols="25"></textarea><br><span class="details" id="adrEnter">Enter Adderss</span><span class="details" id="adrLeave">Okay</span></td>
+                    </tr><br>
+                    <tr>
+                        <td><label class="details">State</label></td>
+                        <td><label class="details">:</label></td>
+                        <td>
+                            <select class="details">
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Rajesthan">Rajesthan</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Uttarakhand">Uttarakhand</option>
+                            </select>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td><label class="details">Service</label></td>
+                        <td><label class="details">:</label></td>
+                        <td>
+                            <select class="details">
+                                <option value="Hire Photographar">Hire Photographar</option>
+                                <option value="Get Camera on Rent">Get Camera on Rent</option>
+                            </select>
+                        </td>
+                    </tr><br>
+                    <tr>
+                        <td><label class="details">Phone Number</label></td>
+                        <td><label class="details">:</label></td>
+                        <td><input class="details" value="+91" size="3" readonly ><input class="details" id="txtPhone" size="15" type="text"></td>
+                    </tr><br>
+                    <tr>
+                        <td><label class="details">e-mail</label></td>
+                        <td><label class="details">:</label></td>
+                        <td><input class="details" id="txtEmail" size="25" type="text"></textarea></td>
+                    </tr><br>
+                    <tr>
+                        <td><label class="details">Date of Booking</label></td>
+                        <td><label class="details">:</label></td>
+                        <td><input class="details" type="date" min="2021-02-22" max="2023-12-31"></td>
+                    </tr><br>
+                    <tr>
+                        <td align="center"><button type="submit" id="btnSubmit" class="details">Submit</button></td>
+                        <td></td>
+                        <td align="center"><button type="reset" id="btnReset" class="details">Reset</button></td>
+                    </tr>
+                </table>
+            </form>
+            </div>
+        </div>
+        <div class="social">
+            <table align="right">
+            <tr>
+                <td><p>Join the conversation</p></td>
+                <td><p><a href="#"><img src="image/z1.png"></a></p></td>
+                <td><p><a href="#"><img src="image/z2.png"></a></p></td>
+                <td><p><a href="#"><img src="image/z3.png"></a></p></td>
+                <td><p><a href="#"><img src="image/z4.png"></a></p></td>
+            </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <table style="width: 100%;">
+                <tr>
+                    <td><label class="footHead">Quick Links</label></td>
+                    <td><label class="footHead">Events</label></td>
+                    <td><label class="footHead">About Us</label></td>
+                    <td><label class="footHead">Our World</label></td>
+                    <td><label class="footHead">Contact</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Wedding Clicks</label></td>
+                    <td rowspan="3"><label class="footCont">Our tour of  <br> Photography</label></td>
+                    <td rowspan="3"><label class="footCont">Flawless <br>Experience</label></td>
+                    <td rowspan="3"><label class="footCont">Capture the <br>Memories for<br> You</label></td>
+                    <td rowspan="3"><label class="footCont">Pranav Acharya<br>Flawless Captures</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Potraits Clicks</label></td>
+                </tr>
+                <tr>
+                    <td><label class="footCont">Arms of Nature</label></td>
+                </tr>
+            </table><br><br><br><br>
+            <p id="left">email:acharya.pranav25@gmail.com</p>   
+            <p id="right">&copy;FlawlessCaptures@2021 All Rights Reserved</p>
+        </div>        
+        <script>
+            var preload = document.getElementById("loading");
+            setTimeout(function load(){
+                preload.style.display="none";
+            },3000);
+        </script>
+    </body>
+</html>
